@@ -1,0 +1,25 @@
+local altPositions = {
+    [2377457818] = Vector3.new(-265, 21.47, -402),  -- Replace 1234567890 with the alt's ID and Vector3.new() with alt's position
+    [2339222369] = Vector3.new(-275, 21.47, -402),  -- Replace 2345678901 with the next alt's ID and Vector3.new() with alt's position
+	[2386732454] = Vector3.new(-255, 21.47, -402),
+	[2320177954] = Vector3.new(-285, 21.47, -402),
+    -- Add more alt IDs and positions as needed
+}
+
+-- Function to teleport alt to a specific position
+local function teleportAltToPosition(altId, position)
+    -- Replace this with code to teleport alt to the specified position
+    print("Teleporting alt with ID:", altId, "to position:", position)
+end
+
+-- Function to handle commands
+local function handleCommand(message)
+    local senderId = message.author.id
+    local content = message.content:lower()
+    
+    if content == ".setup club" and senderId == "419891712" then
+        -- Execute the setup for the club with pre-filled cframes
+        -- Replace "YOUR_USER_ID" with your user ID
+        for altId, position in pairs(altPositions) do
+            teleportAltToPosition(altId, position)
+        end
